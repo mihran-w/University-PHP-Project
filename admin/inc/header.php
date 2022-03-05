@@ -12,9 +12,17 @@
     <link rel="shortcut icon" href="../assets/img/favicon.png" type="image/x-icon">
 </head>
 
-<body>    
-    
-    
+<body>
+
+
+    <?php
+    function GetIp()
+    {
+        $ip = $_SERVER['REMOTE_ADDR'];
+        return $ip;
+    }
+    ?>
+
     <!-- Header -->
     <div id="top-header" class="container-fluid rounded-3">
         <!-- Navigation -->
@@ -22,9 +30,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -38,10 +44,12 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">نظرات</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">کاربر : <?php echo (GetIp()); ?></a>
+                                </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                       تنظیمات
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                        تنظیمات
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="#">تغییر رمز</a></li>
@@ -52,10 +60,10 @@
                                         <li><a class="dropdown-item" href="#">خروج از حساب</a></li>
                                     </ul>
                                 </li>
-                               
-                               
+
+
                             </ul>
-                          
+
                         </div>
                     </div>
                 </nav>
