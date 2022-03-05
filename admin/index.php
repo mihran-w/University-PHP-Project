@@ -25,10 +25,10 @@
                     <div class="card-header p-2"><i class="bi bi-newspaper fs-5 me-2"></i>آخرین اخبار وبسایت</div>
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>انتخاب واحد نیم سال جدید</a></li>
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>آغاز نیم سال تحصیلی </a></li>
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>اطلاعیه های آموزشی</a></li>
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>وام دانشجویی</a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم</a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم </a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم</a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم</a></li>
                         </ul>
                     </div>
                 </div>
@@ -36,9 +36,9 @@
                     <div class="card-header p-2"><i class="bi bi-link-45deg fs-5 me-2"></i>لینک های مفید</div>
                     <div class="card-body">
                         <ul class="list-unstyled">
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>سامانه آموزش مجازی سمیاد</a></li>
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>سامانه بوستان</a></li>
-                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>سامانه بهکاد</a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم</a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم</a></li>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>لورم ایپسوم</a></li>
                         </ul>
                     </div>
                 </div>
