@@ -57,7 +57,7 @@
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
-                                        <li><a class="dropdown-item" href="#">خروج از حساب</a></li>
+                                        <li><a class="dropdown-item" href="../logout.php">خروج از حساب</a></li>
                                     </ul>
                                 </li>
 
