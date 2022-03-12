@@ -73,6 +73,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="#">درباره دانشگاه</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="./login.php">ورود</a>
+                                </li>
                             </ul>
                             <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="جستجو ..."">
