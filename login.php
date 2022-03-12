@@ -37,8 +37,8 @@
                             <input type="password" class="form-control" id="password" name="pswd">
                         </div>
                         <div class="mb-2 form-check">
-                            <input type="checkbox" class="form-check-input" id="remmeber">
-                            <label class="form-check-label" for="remmeber">مرا بخاطر بسپار</label>
+                            <input type="checkbox" class="form-check-input" id="remember">
+                            <label class="form-check-label" for="remember">مرا بخاطر بسپار</label>
                         </div>
 
                         <div class="text-center">
