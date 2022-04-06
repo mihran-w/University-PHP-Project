@@ -40,7 +40,10 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
+                                    <a class="nav-link active" aria-current="page" href="#"> 
+                                    <i class="bi bi-house-door"></i>
+                                    صفحه اصلی
+                                    </a>
                                 </li>
                                 <?php
                                 require_once('./inc/config.php');
@@ -49,18 +52,22 @@
                                 ?>
                                 <?php while ($row = mysqli_fetch_assoc($result)) { ?>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#"><?=$row['name'] ?></a>
+                                        <a class="nav-link" href="#"><?= $row['name'] ?></a>
                                     </li>
                                 <?php } ?>
 
-                                <li class="nav-item">
-                                    <a class="nav-link" href="./login.php">ورود</a>
-                                </li>
+
                             </ul>
-                            <form class="d-flex">
+                            <div class="">
+                                <a class="text-dark text-decoration-none" href="./login.php">
+                                    <i class="bi bi-door-open"></i>
+                                    ورود
+                                </a>
+                                </div>
+                            <!-- <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="جستجو ..."">
                             <button class=" btn btn-secondary" type="submit">جستجو</button>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </nav>

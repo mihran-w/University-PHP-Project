@@ -36,15 +36,18 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                             <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="index.php">داشبورد</a>
+                                    <a class="nav-link active" aria-current="page" href="index.php">
+                                    <i class="bi bi-speedometer"></i>
+                                    داشبورد
+                                    </a>
                                 </li>
                                 <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
                                         دسته بندی ها
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="categoryAdd.php">افزودن دسته بندی</a></li>
-                                        <li><a class="dropdown-item" href="categoryShow.php">مشاهده دسته بندی ها</a></li>
+                                        <li><a class="dropdown-item" href="categoryAdd.php"> <i class="bi bi-plus-square-dotted text-primary me-1"></i>افزودن دسته بندی</a></li>
+                                        <li><a class="dropdown-item" href="categoryShow.php"><i class="bi bi-binoculars text-primary me-1"></i>مشاهده دسته بندی ها</a></li>
                                     </ul>
                                 </li>
 
