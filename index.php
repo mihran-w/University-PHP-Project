@@ -28,12 +28,10 @@ include('./inc/header.php')
                 <div class="card-header p-2"><i class="bi bi-newspaper fs-5 me-2"></i>دسته بندی ها</div>
                 <div class="card-body">
                     <ul class="list-unstyled">
-                        <?php
-                        require_once('./inc/config.php');
-                        $sql = "SELECT * FROM categories";
+
+                        <?php 
                         $result = mysqli_query($conn, $sql);
-                        ?>
-                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                        while ($row = mysqli_fetch_assoc($result)) { ?>
                             <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i><?= $row['name'] ?></a></li>
                         <?php } ?>
                     </ul>
