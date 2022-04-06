@@ -12,9 +12,9 @@
     <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
 </head>
 
-<body>    
-    
-    
+<body>
+
+
     <!-- Header -->
     <div id="top-header" class="container rounded-3">
         <!-- Brand Logo -->
@@ -26,8 +26,7 @@
             </div>
 
             <div class="col-md-4 offset-md-4">
-                <img src="./assets/img/popup-banner.gif" alt="WebSite Logo" class="img-fluid m-3" height="150px"
-                    width="300px">
+                <img src="./assets/img/popup-banner.gif" alt="WebSite Logo" class="img-fluid m-3" height="150px" width="300px">
             </div>
         </div>
         <!-- Navigation -->
@@ -35,9 +34,7 @@
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light">
                     <div class="container-fluid">
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                            aria-expanded="false" aria-label="Toggle navigation">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -45,34 +42,17 @@
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
                                 </li>
+                                <?php
+                                require_once('./inc/config.php');
+                                $sql = "SELECT * FROM categories";
+                                $result = mysqli_query($conn, $sql);
+                                ?>
+                                <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#"><?=$row['name'] ?></a>
+                                    </li>
+                                <?php } ?>
 
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        امور آموزشی
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">سامانه آموزش مجازی</a></li>
-                                        <li><a class="dropdown-item" href="#">سامانه بوستان</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">سامانه کارآموزی</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                        data-bs-toggle="dropdown" aria-expanded="false">
-                                        امور دانشجویان
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">وام دانشجویی</a></li>
-                                        <li><a class="dropdown-item" href="#">خوابگاه</a></li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#">درباره دانشگاه</a>
-                                </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="./login.php">ورود</a>
                                 </li>

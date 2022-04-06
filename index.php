@@ -1,6 +1,6 @@
 <!-- Header -->
 <?php
-include_once('./inc/header.php')
+include('./inc/header.php')
 ?>
 
 <div class="container mt-3">
@@ -25,13 +25,17 @@ include_once('./inc/header.php')
         </div>
         <div class="col-md-3">
             <div class="card">
-                <div class="card-header p-2"><i class="bi bi-newspaper fs-5 me-2"></i>آخرین اخبار وبسایت</div>
+                <div class="card-header p-2"><i class="bi bi-newspaper fs-5 me-2"></i>دسته بندی ها</div>
                 <div class="card-body">
                     <ul class="list-unstyled">
-                        <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>انتخاب واحد نیم سال جدید</a></li>
-                        <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>آغاز نیم سال تحصیلی </a></li>
-                        <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>اطلاعیه های آموزشی</a></li>
-                        <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i>وام دانشجویی</a></li>
+                        <?php
+                        require_once('./inc/config.php');
+                        $sql = "SELECT * FROM categories";
+                        $result = mysqli_query($conn, $sql);
+                        ?>
+                        <?php while ($row = mysqli_fetch_assoc($result)) { ?>
+                            <li class="hover-li"><a href="#" class="text-decoration-none text-dark"><i class="bi bi-caret-left-fill me-1"></i><?= $row['name'] ?></a></li>
+                        <?php } ?>
                     </ul>
                 </div>
             </div>

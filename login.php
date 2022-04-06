@@ -21,7 +21,7 @@
                     <div class="d-flex align-items-center justify-content-center">
                         <i class="bi bi-box-arrow-in-left fs-3 text-primary"></i>
                         <h3 class="ms-2 mb-0">
-                            ورود به داشبورد مدیریت
+      ورود به داشبورد مدیریت                             
                         </h3>
                     </div>
                 </div>
