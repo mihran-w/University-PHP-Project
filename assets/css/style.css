@@ -19,9 +19,20 @@ body {
   background-color: #ecf0f1;
 }
 
+.preloader {
+  background: url("../img/gifs/preloader.gif") center no-repeat;
+  background-color: #f1f2f3;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height: 100vh;
+  z-index: 2;
+}
 
 /* Utilities */
-.lh-0{
+.lh-0 {
   line-height: 0;
 }
 

@@ -2,7 +2,6 @@
 <?php
 include('./inc/header.php')
 ?>
-
 <div class="container mt-3">
     <div class="row g-3">
         <div class="col-md-9">

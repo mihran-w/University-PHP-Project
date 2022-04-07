@@ -14,6 +14,7 @@
 
 <body>
 
+    <div class="preloader"></div>
 
     <!-- Header -->
     <div id="top-header" class="container rounded-3">
@@ -40,9 +41,9 @@
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#"> 
-                                    <i class="bi bi-house-door"></i>
-                                    صفحه اصلی
+                                    <a class="nav-link active" aria-current="page" href="index.php">
+                                        <i class="bi bi-house-door"></i>
+                                        صفحه اصلی
                                     </a>
                                 </li>
                                 <?php
@@ -63,7 +64,7 @@
                                     <i class="bi bi-door-open"></i>
                                     ورود
                                 </a>
-                                </div>
+                            </div>
                             <!-- <form class="d-flex">
                                 <input class="form-control me-2" type="search" placeholder="جستجو ..."">
                             <button class=" btn btn-secondary" type="submit">جستجو</button>
