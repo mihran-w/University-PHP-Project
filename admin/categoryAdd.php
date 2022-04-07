@@ -11,7 +11,7 @@ include_once('./inc/header.php')
 ?>
 
 <div class="container mt-5 mb-5">
-    <h1>افزودن دسته بندی جدید</h1>
+    <h1><i class="bi bi-plus-square-dotted text-primary me-1"></i>افزودن دسته بندی جدید</h1>
     <hr>
     <div class="container">
         <form action="add.php" method="POST" class="mt-5">

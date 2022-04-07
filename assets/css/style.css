@@ -19,6 +19,12 @@ body {
   background-color: #ecf0f1;
 }
 
+
+/* Utilities */
+.lh-0{
+  line-height: 0;
+}
+
 /*  */
 #top-header {
   background-color: #2980b9;
