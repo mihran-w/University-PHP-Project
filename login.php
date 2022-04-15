@@ -31,7 +31,7 @@
                     <form action="./checklogin.php" method="post">
                         <div class="mb-2">
                             <label for="username" class="form-label">نام کاربری</label>
-                            <input type="text" class="form-control" id="username" name="usrName">
+                            <input type="text" class="form-control" id="username" name="usrName" value="<?= @$_COOKIE['myUserName']; ?>">
                             <div class="form-text">لطفا نام کاربری خود را به انگلیسی وارد کنید.</div>
                         </div>
                         <div class="mb-2">
@@ -39,7 +39,14 @@
                             <input type="password" class="form-control" id="password" name="pswd">
                         </div>
                         <div class="mb-2 form-check">
-                            <input type="checkbox" class="form-check-input" id="remember">
+                            <input type="checkbox" class="form-check-input" name="remember" id="remember" 
+                            <?php
+                                if(isset($_COOKIE['myRemember'])){
+                                    echo 'checked = "checked"';
+                                }else{
+                                    echo '';
+                                }
+                            ?>>
                             <label class="form-check-label" for="remember">مرا بخاطر بسپار</label>
                         </div>
 
