@@ -60,7 +60,7 @@
 
                             </ul>
                             <div class="">
-                                <a class="text-dark text-decoration-none" href="./login.php">
+                                <a class="text-dark text-decoration-none" href="./login.php" target="_blank">
                                     <i class="bi bi-door-open"></i>
                                     ورود
                                 </a>
