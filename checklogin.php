@@ -3,6 +3,12 @@ session_start();
 $usrName = $_POST['usrName'];
 $pswd = $_POST['pswd'];
 
+// Set Cookie
+if (@$_POST['remember']) {
+    setcookie('myUserName', $usrName, time() + 60, '/');
+    setcookie('myRemember', 1, time() + 60, '/');
+}
+
 require_once('./inc/config.php');
 
 $sql = "SELECT password FROM users WHERE username = '$usrName' AND password = '$pswd'";
