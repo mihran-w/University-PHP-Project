@@ -1,7 +1,14 @@
 <?php
 session_start();
-$usrName = $_POST['usrName'];
-$pswd = $_POST['pswd'];
+
+require_once('./inc/config.php');
+
+$usrName = mysqli_real_escape_string($conn, $_POST['usrName']);
+$pswd = mysqli_real_escape_string($conn, $_POST['pswd']);
+
+// MD5 Hashing
+$pswd = md5($pswd);
+
 
 // Set Cookie
 if (@$_POST['remember']) {
@@ -9,7 +16,6 @@ if (@$_POST['remember']) {
     setcookie('myRemember', 1, time() + 60, '/');
 }
 
-require_once('./inc/config.php');
 
 $sql = "SELECT password FROM users WHERE username = '$usrName' AND password = '$pswd'";
 $result = mysqli_query($conn, $sql);
