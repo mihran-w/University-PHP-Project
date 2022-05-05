@@ -60,7 +60,6 @@
                                     </a>
                                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <li><a class="dropdown-item" href="bookAdd.php"> <i class="bi bi-plus-square-dotted text-primary me-1"></i>افزودن کتاب</a></li>
-                                        <li><a class="dropdown-item" href="bookShow.php"><i class="bi bi-binoculars text-primary me-1"></i>مشاهده کتاب ها</a></li>
                                     </ul>
                                 </li>
 
