@@ -8,12 +8,17 @@ if (!$_SESSION['username']) {
 <?php
 require_once("../inc/config.php");
 if ($_POST) {
+
+    $target_dir = "../uploads/";
+    $target_file = $target_dir . basename($_FILES["image"]["name"]);
+    move_uploaded_file($_FILES["image"]["tmp_name"], $target_file);
+
     $categoryId = $_POST['category'];
     $name = $_POST['name'];
     $description = $_POST['description'];
 
-    $sql = "INSERT INTO `books` (`categoryId`, `name`, `description`, `imagePath`, `creationDate`) VALUES ( '$categoryId', '$name', '$description', '', CURRENT_TIMESTAMP);";
+    $sql = "INSERT INTO `books` (`categoryId`, `name`, `description`, `imagePath`, `creationDate`) VALUES ( '$categoryId', '$name', '$description', '$target_file', CURRENT_TIMESTAMP);";
     mysqli_query($conn, $sql);
 }
- header('location:categoryShow.php');
+header('location:bookShow.php');
 ?>

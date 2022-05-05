@@ -20,7 +20,7 @@ $result = mysqli_query($conn, $sql);
     <h1><i class="bi bi-plus-square-dotted text-primary me-1"></i>افزودن کتاب جدید</h1>
     <hr>
     <div class="container">
-        <form action="Addbooks.php" method="POST" class="mt-5">
+        <form action="Addbooks.php" method="post" enctype="multipart/form-data" class="mt-5">
             <div class="row">
                 <div class="mb-2">
                     <select class="form-select" name="category">
