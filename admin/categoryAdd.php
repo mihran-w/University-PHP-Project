@@ -14,7 +14,7 @@ include_once('./inc/header.php')
     <h1><i class="bi bi-plus-square-dotted text-primary me-1"></i>افزودن دسته بندی جدید</h1>
     <hr>
     <div class="container">
-        <form action="add.php" method="POST" class="mt-5">
+        <form action="AddCategories.php" method="POST" class="mt-5">
             <div class="mb-2">
                 <label for="name" class="form-label">نام دسته بندی :</label>
                 <input type="text" class="form-control" id="name" placeholder="نام دسته بندی را وارد کنید" name="name">

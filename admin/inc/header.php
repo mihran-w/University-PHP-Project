@@ -54,9 +54,16 @@
                                     </ul>
                                 </li>
 
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">کتاب ها</a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+                                        کتاب ها
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <li><a class="dropdown-item" href="bookAdd.php"> <i class="bi bi-plus-square-dotted text-primary me-1"></i>افزودن کتاب</a></li>
+                                        <li><a class="dropdown-item" href="bookShow.php"><i class="bi bi-binoculars text-primary me-1"></i>مشاهده کتاب ها</a></li>
+                                    </ul>
                                 </li>
+
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">نظرات</a>
                                 </li>

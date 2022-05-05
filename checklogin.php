@@ -9,7 +9,6 @@ $pswd = mysqli_real_escape_string($conn, $_POST['pswd']);
 // MD5 Hashing
 $pswd = md5($pswd);
 
-
 // Set Cookie
 if (@$_POST['remember']) {
     setcookie('myUserName', $usrName, time() + 60, '/');
@@ -17,7 +16,7 @@ if (@$_POST['remember']) {
 }
 
 
-$sql = "SELECT password FROM users WHERE username = '$usrName' AND password = '$pswd'";
+$sql = "SELECT * FROM users WHERE username = '$usrName' AND password = '$pswd'";
 $result = mysqli_query($conn, $sql);
 
 if (mysqli_num_rows($result) == 1) {
