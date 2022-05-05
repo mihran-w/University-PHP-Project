@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 21, 2022 at 11:48 AM
+-- Generation Time: May 05, 2022 at 04:07 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Database: `unicms_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `books`
+--
+
+DROP TABLE IF EXISTS `books`;
+CREATE TABLE IF NOT EXISTS `books` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `categoryId` int(11) NOT NULL,
+  `name` varchar(200) COLLATE utf8_persian_ci NOT NULL,
+  `description` text COLLATE utf8_persian_ci NOT NULL,
+  `imagePath` varchar(250) COLLATE utf8_persian_ci NOT NULL,
+  `creationDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
+
+--
+-- Dumping data for table `books`
+--
+
+INSERT INTO `books` (`id`, `categoryId`, `name`, `description`, `imagePath`, `creationDate`) VALUES
+(25, 16, 'نقاشی', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .', 'uploads/frame0.png', '2022-05-05 15:58:17'),
+(24, 25, 'ارز دیجیتال', 'لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است .', 'uploads/Rectangle 121.png', '2022-05-05 15:17:05');
 
 -- --------------------------------------------------------
 
