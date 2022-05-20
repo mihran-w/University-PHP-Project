@@ -23,7 +23,7 @@
     }
     ?>
 
-    <!-- <div class="preloader"></div> -->
+    <div class="preloader"></div>
 
 
     <!-- Header -->
