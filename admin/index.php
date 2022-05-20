@@ -40,10 +40,10 @@ $result = mysqli_query($conn, $sql);
                                         <p>
                                             <?= $row['description'] ?>
                                         </p>
-                                        <span class="fs-6 text-muted">
-                                            تاریخ انتشار :
-                                            <?= $row['creationDate'] ?>
-                                        </span>
+                                        <div class="text-end">
+                                            <a href="bookDelete.php?id=<?= $row['id'] ?>" class="btn btn-danger"><i class="bi bi-trash fs-5 lh-0 m-auto"></i></a>
+                                            <a href="bookEdit.php?id=<?= $row['id'] ?>" class="btn btn-primary"><i class="bi bi-pencil-square fs-5 lh-0 m-auto"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
