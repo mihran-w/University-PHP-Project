@@ -6,7 +6,7 @@ if (!$_SESSION['username']) {
 ?>
 <?php
 require("../inc/config.php");
-$id = $_GET['id'];
+$id = intval($_GET["id"]);
 
 $sqlbook = "SELECT * FROM books WHERE id = $id";
 $resultbook = mysqli_query($conn, $sqlbook);
