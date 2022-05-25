@@ -18,27 +18,29 @@ $result = mysqli_query($conn, $sql_book);
                 while ($row = mysqli_fetch_assoc($result)) {
                 ?>
                     <div class="col-md-6">
-                        <div class="card shadow-sm mb-4">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <img src="<?= "./admin/" . $row['imagePath'] ?>" alt="title" class="img-fluid rounded-3">
-                                    </div>
-                                    <div class="col-md-9">
-                                        <h4>
-                                            <?= $row['name'] ?>
-                                        </h4>
-                                        <p>
-                                            <?= $row['shortDes'] ?>
-                                        </p>
-                                        <span class="fs-6 text-muted">
-                                            تاریخ انتشار :
-                                            <?= $row['creationDate'] ?>
-                                        </span>
+                        <a href="showbook.php?id=<?= $row["id"] ?>">
+                            <div class="card shadow-sm mb-4">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <img src="<?= "./admin/" . $row['imagePath'] ?>" alt="title" class="img-fluid rounded-3">
+                                        </div>
+                                        <div class="col-md-9">
+                                            <h4>
+                                                <?= $row['name'] ?>
+                                            </h4>
+                                            <p>
+                                                <?= $row['shortDes'] ?>
+                                            </p>
+                                            <span class="fs-6 text-muted">
+                                                تاریخ انتشار :
+                                                <?= $row['creationDate'] ?>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 <?php } ?>
             </div>

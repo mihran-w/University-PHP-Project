@@ -14,7 +14,7 @@
 
 <body>
 
-    <div class="preloader"></div>
+    <!-- <div class="preloader"></div> -->
 
     <!-- Header -->
     <div id="top-header" class="container rounded-3">
