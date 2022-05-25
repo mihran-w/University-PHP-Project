@@ -20,18 +20,20 @@ if ($_POST) {
 
         $categoryId = $_POST['category'];
         $name = $_POST['name'];
+        $shortDes = $_POST['shortDes'];
         $description = $_POST['description'];
 
-        $sqlfin = "UPDATE `books` SET `categoryId` = '$categoryId', `name` = '$name', `description` = '$description' , `imagePath` = '$target_file' WHERE `books`.`id` = $id;";
+        $sqlfin = "UPDATE `books` SET `categoryId` = '$categoryId', `name` = '$name', `shortDes` = '$shortDes', `description` = '$description' , `imagePath` = '$target_file' WHERE `books`.`id` = $id;";
         mysqli_query($conn, $sqlfin);
         mysqli_close($conn);
         header('Location: index.php ');
     } else {
         $categoryId = $_POST['category'];
         $name = $_POST['name'];
+        $shortDes = $_POST['shortDes'];
         $description = $_POST['description'];
         $target_file = $rowbook['imagePath'];
-        $sqlfin = "UPDATE `books` SET `categoryId` = '$categoryId', `name` = '$name', `description` = '$description' , `imagePath` = '$target_file' WHERE `books`.`id` = $id;";
+        $sqlfin = "UPDATE `books` SET `categoryId` = '$categoryId', `name` = '$name',`shortDes` = '$shortDes', `description` = '$description' , `imagePath` = '$target_file' WHERE `books`.`id` = $id;";
         mysqli_query($conn, $sqlfin);
         // echo var_dump($sql);
         mysqli_close($conn);

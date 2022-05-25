@@ -54,6 +54,10 @@ $rowcat = mysqli_fetch_assoc($resultcat);
                     <input type="text" class="form-control" id="name" placeholder="نام کتاب را وارد کنید" name="name" value="<?=  $rowbook["name"] ?>">
                 </div>
                 <div class="mb-2">
+                    <label for="shortDes" class="form-label">توضیحات :</label>
+                    <textarea class="form-control" id="shortDes" rows="5" name="shortDes" placeholder="توضیح مختصر را وارد کنید"><?= htmlspecialchars($rowbook["shortDes"]) ?></textarea>
+                </div>
+                <div class="mb-2">
                     <label for="description" class="form-label">توضیحات :</label>
                     <textarea class="form-control" id="description" rows="8" name="description" placeholder="توضیحات کتاب را وارد کنید"><?= htmlspecialchars($rowbook["description"]) ?></textarea>
                 </div>

@@ -39,7 +39,11 @@ $result = mysqli_query($conn, $sql);
                     <input type="text" class="form-control" id="name" placeholder="نام کتاب را وارد کنید" name="name">
                 </div>
                 <div class="mb-2">
-                    <label for="ckeditor" class="form-label">توضیحات :</label>
+                    <label for="shortDes" class="form-label">توضیح مختصر :</label>
+                    <textarea class="form-control" id="shortDes" rows="5" name="shortDes" placeholder="توضیح مختصر درباره کتاب را وارد کنید"></textarea>
+                </div>
+                <div class="mb-2">
+                    <label for="description" class="form-label">توضیحات کامل :</label>
                     <textarea class="form-control" id="description" rows="15" name="description" placeholder="توضیحات کتاب را وارد کنید"></textarea>
                 </div>
 

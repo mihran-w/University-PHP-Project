@@ -38,7 +38,7 @@ $result = mysqli_query($conn, $sql);
                                             <?= $row['name'] ?>
                                         </h4>
                                         <p>
-                                            <?= $row['description'] ?>
+                                            <?= $row['shortDes'] ?>
                                         </p>
                                         <div class="text-end">
                                             <a href="bookDelete.php?id=<?= $row['id'] ?>" class="btn btn-danger"><i class="bi bi-trash fs-5 lh-0 m-auto"></i></a>

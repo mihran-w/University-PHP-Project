@@ -29,7 +29,7 @@ $result = mysqli_query($conn, $sql_book);
                                             <?= $row['name'] ?>
                                         </h4>
                                         <p>
-                                            <?= $row['description'] ?>
+                                            <?= $row['shortDes'] ?>
                                         </p>
                                         <span class="fs-6 text-muted">
                                             تاریخ انتشار :

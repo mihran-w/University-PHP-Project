@@ -15,9 +15,10 @@ if ($_POST) {
 
     $categoryId = $_POST['category'];
     $name = $_POST['name'];
+    $shortDes = $_POST['shortDes'];
     $description = $_POST['description'];
 
-    $sql = "INSERT INTO `books` (`categoryId`, `name`, `description`, `imagePath`, `creationDate`) VALUES ( '$categoryId', '$name', '$description', '$target_file', CURRENT_TIMESTAMP);";
+    $sql = "INSERT INTO `books` (`categoryId`, `name`, `shortDes`, `description`, `imagePath`, `creationDate`) VALUES ( '$categoryId', '$name', '$shortDes', '$description', '$target_file', CURRENT_TIMESTAMP);";
     mysqli_query($conn, $sql);
 }
 header('location:index.php');
