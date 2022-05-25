@@ -75,15 +75,7 @@ $result = mysqli_query($conn, $sql_book);
     </div>
 </div>
 
-<div class="container">
-<textarea rows="10" id="ckeditor4" name="ckEditor4" ></textarea>
-</div>
-
 <!-- Footer -->
 <?php
 include_once('./inc/footer.php')
 ?>
-<script src="./assets/ckeditor/ckeditor.js"></script>
-<script>
-    CKEDITOR.replace('ckeditor4');
-</script>

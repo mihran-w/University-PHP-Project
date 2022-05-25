@@ -51,11 +51,11 @@ $rowcat = mysqli_fetch_assoc($resultcat);
 
                 <div class="mb-2">
                     <label for="name" class="form-label">نام کتاب :</label>
-                    <input type="text" class="form-control" id="name" placeholder="نام کتاب را وارد کنید" name="name" value="<?= $rowbook["name"] ?>">
+                    <input type="text" class="form-control" id="name" placeholder="نام کتاب را وارد کنید" name="name" value="<?=  $rowbook["name"] ?>">
                 </div>
                 <div class="mb-2">
                     <label for="description" class="form-label">توضیحات :</label>
-                    <textarea class="form-control" id="description" rows="8" name="description" placeholder="توضیحات کتاب را وارد کنید" value="<?= $rowbook["description"] ?>"><?= $rowbook["description"] ?></textarea>
+                    <textarea class="form-control" id="description" rows="8" name="description" placeholder="توضیحات کتاب را وارد کنید"><?= htmlspecialchars($rowbook["description"]) ?></textarea>
                 </div>
 
                 <div class="mb-2">
