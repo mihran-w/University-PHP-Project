@@ -110,3 +110,7 @@ if ($_POST) {
 <?php
 include_once('./inc/footer.php')
 ?>
+
+<script>
+    CKEDITOR.replace('description');
+</script>

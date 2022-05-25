@@ -39,8 +39,8 @@ $result = mysqli_query($conn, $sql);
                     <input type="text" class="form-control" id="name" placeholder="نام کتاب را وارد کنید" name="name">
                 </div>
                 <div class="mb-2">
-                    <label for="description" class="form-label">توضیحات :</label>
-                    <textarea class="form-control" id="description" rows="8" name="description" placeholder="توضیحات کتاب را وارد کنید"></textarea>
+                    <label for="ckeditor" class="form-label">توضیحات :</label>
+                    <textarea class="form-control" id="description" rows="15" name="description" placeholder="توضیحات کتاب را وارد کنید"></textarea>
                 </div>
 
                 <div class="mb-2">
@@ -59,7 +59,12 @@ $result = mysqli_query($conn, $sql);
 <div style="height: 7rem;"></div>
 
 
+
 <!-- Footer -->
 <?php
 include_once('./inc/footer.php')
 ?>
+
+<script>
+    CKEDITOR.replace('description');
+</script>
