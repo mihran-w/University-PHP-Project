@@ -81,6 +81,49 @@ $result = mysqli_query($conn, $sql_book);
                             </form>
                         </div>
                     </div>
+
+                    <div class="card p-3 bg-light-1 mt-5">
+                        <div class="card-title">
+                            <h6>
+                                <i class="bi bi-chat-dots fs-3"></i>
+                                دیدگاه های اخیر :
+                            </h6>
+                        </div>
+
+                        <div class="card-body">
+                            <?php
+                            $sqlComment = "SELECT * FROM comments WHERE bookId = $bookId && `status` = '1'";
+                            $comments = mysqli_query($conn, $sqlComment);
+
+
+                            ?>
+
+
+                            <div class="row g-2">
+                                <?php
+                                while ($commentRow = mysqli_fetch_assoc($comments)) {
+                                ?>
+
+
+                                    <div class="col-md-12 card p-2 shadow-sm">
+                                        <div class="d-flex">
+                                            <img src="./assets/img/user.png" alt="user Image" width="70">
+                                            <div class="ms-2 mt-3">
+                                                <h6 class="lh-0 fw-bold"><?= $commentRow['fullname'] ?></h6>
+                                                <a href="<?= $commentRow['website'] ?>" class="fs-7 lh-0 text-muted"><?= $commentRow['website'] ?></a>
+                                            </div>
+                                        </div>
+                                        <div class="d-flex ms-5 mt-0">
+                                            <p class="ms-4">
+                                                <?= $commentRow['comment'] ?>
+                                            </p>
+                                        </div>
+                                    </div>
+                                <?php } ?>
+                            </div>
+
+                        </div>
+                    </div>
                 </div>
 
 
