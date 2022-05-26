@@ -64,7 +64,7 @@
                                 </li>
 
                                 <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">نظرات</a>
+                                    <a class="nav-link active" aria-current="page" href="comments.php">نظرات</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link active" aria-current="page" href="#">کاربر : <?php echo (GetIp()); ?></a>

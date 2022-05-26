@@ -7,7 +7,7 @@ if ($_POST) {
     $website = $_POST['website'];
     $comment = $_POST['comment'];
 
-    $sql = "INSERT INTO `comments` (`bookId`, `fullname`, `website`, `comment`) VALUES ( '$bookId', '$fullname', '$website', '$comment')";
+    $sql = "INSERT INTO `comments` (`bookId`, `fullname`, `website`, `comment`,`status`) VALUES ( '$bookId', '$fullname', '$website', '$comment','0')";
     mysqli_query($conn, $sql);
 }
 ?> 
