@@ -59,3 +59,7 @@ a {
     border-bottom: 2px solid #05c46b;
     transition: padding-right 0.5s;
 }
+
+.fs-7 {
+    font-size: 0.8rem;
+}

@@ -38,10 +38,52 @@ $result = mysqli_query($conn, $sql_book);
                         <div class="card-body mt-5">
                             <?= $row["description"] ?>
                         </div>
+
+                        <div class="card-footer text-center">
+                            <p class="fs-7 text-muted">
+                                تمامی حقوق مادی و معنوی این اثر نزد نویسنده و ناشر آن محفوظ می گردد.
+                            </p>
+                        </div>
                     </article>
 
 
                 <?php } ?>
+
+                <div class="mt-5">
+                    <div class="card p-3 shadow-sm ">
+                        <p class="fw-bold">دیدگاه شما :</p>
+                        <div class="card-body">
+
+                            <div id="commentalert">
+
+                            </div>
+
+                            <form id="send" action="" method="POST">
+                                <input type="hidden" name="bookId" value="<?= $bookId ?>">
+                                <div class="row gy-2">
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control" placeholder="نام و نام خانوادگی " name="fullname">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="mb-2">
+                                            <input type="text" class="form-control" placeholder="نام وبسایت" name="website">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="دیدگاه ..." class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button class="btn btn-success" type="submit">ثبت دیدگاه</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+
             </div>
         </div>
         <div class="col-md-3">
@@ -76,7 +118,31 @@ $result = mysqli_query($conn, $sql_book);
     </div>
 </div>
 
+
+
 <!-- Footer -->
 <?php
 include_once('./inc/footer.php')
 ?>
+<script src="../assets/js/sweetAlert.js"></script>
+<script>
+    $("#send").submit(function(e) {
+        e.preventDefault();
+        $.ajax({
+            type: "post",
+            url: "addComment.php",
+            data: $(this).serialize(),
+            success: function() {
+                Swal.fire({
+                    title: 'دیدگاه شما با موفقیت ثبت شد و پس از تایید توسط ادمین در وبسایت قرار داده خواهد شد.',
+                    icon: 'success',
+                    confirmButtonText: 'مرسی',
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        location.reload();
+                    }
+                })
+            },
+        });
+    });
+</script>
