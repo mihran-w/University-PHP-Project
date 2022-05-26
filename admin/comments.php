@@ -42,7 +42,7 @@ $result = mysqli_query($conn, $sql);
             <th scope="row"><?= $counter ?></th>
             <td><?= $row['fullname'] ?></td>
             <td><?= $row['website'] ?></td>
-            <td><?= substr($row['comment'],0,101).' ...'  ?></td>
+            <td><?= substr($row['comment'], 0, 101) . ' ...'  ?></td>
             <td class="d-flex justify-content-between align-items-center">
               <a class="btn " href="addCommentStatus.php?id=<?= $row['id'] ?>">
                 <?php
@@ -81,14 +81,3 @@ $result = mysqli_query($conn, $sql);
 <?php
 include_once('./inc/footer.php')
 ?>
-
-<script>
-  $("#sendStatus").submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-      type: "post",
-      url: "addCommentStatus.php",
-      data: $(this).serialize(),
-    });
-  });
-</script>
